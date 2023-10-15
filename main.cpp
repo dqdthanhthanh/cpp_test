@@ -29,6 +29,157 @@ int main()
 {
   cout << endl;
 
+  //___ Arrays ___
+  // string cars0[4] = {"Volvo", "BMW", "Ford", "Mazda"};
+  // cars0[0] = "Opel";
+  // cout << cars0[0] << "\n";
+
+  // string cars1[5] = {"Volvo", "BMW", "Ford", "Mazda", "Tesla"};
+  // for (int i = 0; i < 5; i++) {
+  //   cout << i << " = " << cars1[i] << "\n";
+  // }
+
+  // int myNumbers0[5] = {10, 20, 30, 40, 50};
+  // for (int i : myNumbers0) {
+  //   cout << i << "\n";
+  // }
+
+  // string cars2[] = {"Volvo", "BMW", "Ford"}; // Three array elements
+  // cout << cars2 << "\n";
+  // for (string i : cars2) {
+  //   cout << i << "\n";
+  // }
+
+  // //Omit Array Size
+  // string cars[5];
+  // cars[0] = "Volvo";
+  // cars[1] = "BMW";
+  // cout << cars[0] << "\n";
+  // cout << cars[1] << "\n";
+  // cout << cars[2] << "\n";
+  // cout << cars[3] << "\n";
+  // cout << cars[4] << "\n";
+
+  // //Array Size
+  // int myNumbers[5] = {10, 20, 30, 40, 50};
+  // cout << sizeof(myNumbers) << "\n";
+
+  // int getArrayLength = sizeof(myNumbers) / sizeof(int);
+  // cout << getArrayLength << "\n";
+
+  // for (int i = 0; i < sizeof(myNumbers) / sizeof(int); i++) {
+  //   cout << myNumbers[i] << "\n";
+  // }
+
+  // for (int i : myNumbers) {
+  //   cout << i << "\n";
+  // }
+
+  // //Multi-Dimensional Arrays
+  // string letters0[2][4];
+
+  // string letters1[2][4] = {
+  //   { "A", "B", "C", "D" },
+  //   { "E", "F", "G", "H" }
+  // };
+
+  // string letters2[2][2][2] = {
+  //   {
+  //     { "A", "B" },
+  //     { "C", "D" }
+  //   },
+  //   {
+  //     { "E", "F" },
+  //     { "G", "H" }
+  //   }
+  // };
+
+  // string letters3[2][4] = {
+  //   { "A", "B", "C", "D" },
+  //   { "E", "F", "G", "H" }
+  // };
+  // letters3[0][0] = "Z";
+
+  // cout << letters3[0][0] << "\n";  // Now outputs "Z" instead of "A"
+
+  // string letters[2][4] = {
+  //   { "A", "B", "C", "D" },
+  //   { "E", "F", "G", "H" }
+  // };
+
+  // for (int i = 0; i < 2; i++) {
+  //   for (int j = 0; j < 4; j++) {
+  //     cout << letters[i][j] << i << j << "\n";
+  //   }
+  // } 
+
+  // string letters4[2][2][2] = {
+  //   {
+  //     { "A", "B" },
+  //     { "C", "D" }
+  //   },
+  //   {
+  //     { "E", "F" },
+  //     { "G", "H" }
+  //   }
+  // };
+
+  // for (int i = 0; i < 2; i++) {
+  //   for (int j = 0; j < 2; j++) {
+  //     for (int k = 0; k < 2; k++) {
+  //       cout << letters4[i][j][k] << i << j << k << "\n";
+  //     }
+  //   }
+  // } 
+
+  // //Battleship Game
+  // // We put "1" to indicate there is a ship.
+  // int hit_size = 2;
+  // bool ships[2][2] = {
+  //   { 0, 1},
+  //   { 1, 0},
+  // };
+
+  // // Keep track of how many hits the player has and how many turns they have played in these variables
+  // int hits = 0;
+  // int numberOfTurns = 0;
+
+  // // Allow the player to keep going until they have hit all four ships
+  // while (hits < 2) {
+  //   int row, column;
+
+  //   cout << "Selecting coordinates\n";
+
+  //   // Ask the player for a row
+  //   cout << "Choose a row number between 0 and " << hit_size - 1 << ": ";
+  //   cin >> row;
+
+  //   // Ask the player for a column
+  //   cout << "Choose a column number between 0 and " << hit_size - 1 << ": ";
+  //   cin >> column;
+
+  //   // Check if a ship exists in those coordinates
+  //   if (ships[row][column]) {
+  //     // If the player hit a ship, remove it by setting the value to zero.
+  //     ships[row][column] = 0;
+
+  //     // Increase the hit counter
+  //     hits++;
+
+  //     // Tell the player that they have hit a ship and how many ships are left
+  //     cout << "Hit! " << (hit_size-hits) << " left.\n\n";
+  //   } else {
+  //     // Tell the player that they missed
+  //     cout << "Miss\n\n";
+  //   }
+
+  //   // Count how many turns the player has taken
+  //   numberOfTurns++;
+  // }
+
+  // cout << "Victory!\n";
+  // cout << "You won in " << numberOfTurns << " turns";
+
   //___ For Loop ___
   // cout << "For ex0" << "\n";
   // for (int i = 0; i < 5; i++){
@@ -239,5 +390,5 @@ int main()
   // cout << "\n"<< x + y + z;
   // cout << "\nI am " << myAge << " years old.";
   // cout << "\n\tHello World!\n";
-  // return 0;
+  return 0;
 }
