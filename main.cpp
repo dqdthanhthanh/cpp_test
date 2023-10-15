@@ -29,6 +29,80 @@ int main()
 {
   cout << endl;
 
+  //___ Pointers ___
+
+
+  //___ Memory Address ___
+  // string food = "Pizza";
+  // cout << &food; // Outputs 0x6dfed4 ect
+
+  //___ References ___
+  // string food = "Pizza";
+  // string &meal = food;
+
+  // cout << food << "\n";  // Outputs Pizza
+  // cout << meal << "\n";  // Outputs Pizza
+
+  //___ Structure ___
+  // // Create a structure variable called myStructure
+  // struct {
+  //   int myNum;
+  //   string myString;
+  // } myStructure0;
+
+  // // Assign values to members of myStructure
+  // myStructure0.myNum = 1;
+  // myStructure0.myString = "Hello World!";
+
+  // // Print members of myStructure
+  // cout << myStructure0.myNum << "\n";
+  // cout << myStructure0.myString << "\n";
+
+  // // Multiple structure variables separated with commas
+  // struct {
+  //   int myNum;
+  //   string myString;
+  // } myStruct1, myStruct2, myStruct3;
+
+  // //Use one structure to represent two cars:
+  // struct {
+  //   string brand;
+  //   string model;
+  //   int year;
+  // } myCar1, myCar2; // We can add variables by separating them with a comma here
+
+  // // One Structure in Multiple Variables
+  // // Put data into the first structure
+  // myCar1.brand = "BMW";
+  // myCar1.model = "X5";
+  // myCar1.year = 1999;
+
+  // // Put data into the second structure
+  // myCar2.brand = "Ford";
+  // myCar2.model = "Mustang";
+  // myCar2.year = 1969;
+
+  // // Print the structure members
+  // cout << "One Structure in Multiple Variables:" << "\n";
+  // cout << myCar1.brand << " " << myCar1.model << " " << myCar1.year << "\n";
+  // cout << myCar2.brand << " " << myCar2.model << " " << myCar2.year << "\n";
+
+  // // Named Structures
+  // // Declare a structure named "car"
+  // struct car {
+  //   string brand;
+  //   string model;
+  //   int year;
+  // };
+
+  // car myCar0;
+  // myCar0.brand = "BMW";
+  // myCar0.model = "X5";
+  // myCar0.year = 1999;
+
+  // cout << "Named Structures:" << "\n";
+  // cout << myCar0.brand << " " << myCar0.model << " " << myCar0.year << "\n";
+
   //___ Arrays ___
   // string cars0[4] = {"Volvo", "BMW", "Ford", "Mazda"};
   // cars0[0] = "Opel";
