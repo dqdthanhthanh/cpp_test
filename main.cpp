@@ -17,6 +17,11 @@ string myText = "Hello";     // 1byte String
 
 << toan tu chen dau ra
 >> toan tu trich xuat nhap vao
+
+Tip: There are three ways to declare pointer variables, but the first way is preferred:
+string* mystring; // Preferred
+string *mystring;
+string * mystring;
 */
 
 #include <iostream>
@@ -25,23 +30,137 @@ string myText = "Hello";     // 1byte String
 
 using namespace std;
 
+//___ Functions ___
+void myFunction() {
+  // code to be executed
+  // Note: If a user-defined function, such as myFunction() is declared after the main() function, an error will occur:
+  cout << "I just got executed!\n";
+}
+
+// Function declaration
+void myFunctionNew();
+
+// Parameters and Arguments: Tham số và đối số
+void myNameFunction(string fname = "MGF", int age = 0) {
+  cout << fname << " Refsnes. " << age << " years old. \n";
+}
+
+// Return Values
+int myNumberFunction(int x) {
+  return 5 + x;
+}
+
+// Pass By Reference
+void swapNums(int &x, int &y) {
+  int z = x;
+  x = y;
+  y = z;
+}
+
+// Pass Arrays
+void myArraysFunction(int myNumbers[5]) {
+  for (int i = 0; i < 5; i++) {
+    cout << myNumbers[i] << "\n";
+  }
+}
+
+// Function Overloading: Hàm nạp chồng
+// Note: Multiple functions can have the same name as long as the number and/or type of parameters are different.
+int plusFunc(int x, int y) {return x + y;}
+double plusFunc(double x, double y) {return x + y;}
+
+// Recursion: đệ quy
+int sum(int k) {
+  if (k > 0) {
+    return k + sum(k - 1);
+  } else {
+    return 0;
+  }
+}
+
 int main()
 {
   cout << endl;
 
-  //___ Pointers ___
+  // Recursion: đệ quy
+  int result = sum(10);
+  cout << "result: " << result << "\n";
 
+  // Function Overloading: plusFunc()
+  int myNum1 = plusFunc(8, 5);
+  double myNum2 = plusFunc(4.3, 6.26);
+  cout << "Int: " << myNum1 << "\n";
+  cout << "Double: " << myNum2 << "\n";
+
+  // Pass Arrays: myArraysFunction()
+  int myNumbers[5] = {10, 20, 30, 40, 50};
+  myArraysFunction(myNumbers);
+
+  // Pass By Reference: swapNums()
+  int firstNum = 10;
+  int secondNum = 20;
+
+  cout << "Before swap: " << "\n";
+  cout << firstNum << secondNum << "\n";
+
+  // Call the function, which will change the values of firstNum and secondNum
+  swapNums(firstNum, secondNum);
+
+  cout << "After swap: " << "\n";
+  cout << firstNum << secondNum << "\n";
+
+  // Function declaration
+  myFunction();
+  myFunctionNew();
+  myNameFunction("Liam", 3);
+  myNameFunction("Jenny", 14);
+  myNameFunction("Anja", 30);
+  cout << "My number: " << myNumberFunction(10) << "\n";
+
+  //___ Pointers ___
+  // string food0 = "Pizza"; // A food variable of type string
+  // cout << food0 << "\n";  // Outputs the value of food (Pizza)
+  // cout << &food0 << "\n"; // Outputs the memory address of food (0x6dfed4)
+
+  // // Reference & Dereference: Tham chieu va quy chieu
+  // string food = "Pizza";  // Variable declaration
+  // string* ptr = &food;    // Pointer declaration
+
+  // // Output the value of food (Pizza)
+  // cout << food << "\n";
+
+  // // Output the memory address of food (0x6dfed4)
+  // cout << &food << "\n";
+
+  // // Output the memory address of food with the pointer (0x6dfed4)
+  // cout << ptr << "\n";
+
+  // // Reference: Output the memory address of food with the pointer (0x6dfed4)
+  // cout << ptr << "\n";
+
+  // // Dereference: Output the value of food with the pointer (Pizza)
+  // cout << *ptr << "\n";
+
+  // // Modify Pointers
+  // // Change the value of the pointer
+  // *ptr = "Hamburger";
+
+  // // Output the new value of the pointer (Hamburger)
+  // cout << *ptr << "\n";
+
+  // // Output the new value of the food variable (Hamburger)
+  // cout << food << "\n";
 
   //___ Memory Address ___
   // string food = "Pizza";
   // cout << &food; // Outputs 0x6dfed4 ect
 
   //___ References ___
-  // string food = "Pizza";
-  // string &meal = food;
+  // string food1 = "Pizza";
+  // string &meal = food1;
 
-  // cout << food << "\n";  // Outputs Pizza
-  // cout << meal << "\n";  // Outputs Pizza
+  // cout << food1 << "\n";  // Outputs Pizza
+  // cout << &meal << "\n";  // Outputs Pizza
 
   //___ Structure ___
   // // Create a structure variable called myStructure
@@ -465,4 +584,9 @@ int main()
   // cout << "\nI am " << myAge << " years old.";
   // cout << "\n\tHello World!\n";
   return 0;
+}
+
+// Function definition
+void myFunctionNew() {
+  cout << "I just got executed!\n";
 }
